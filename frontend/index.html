@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Delights Bakery - Custom Cake Queries</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for warm bakery feel -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CureWell Hospitals — experienced specialists, modern care and genuine compassion." />
+  <title>CureWell Hospitals | Care That Comes From the Heart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1>🎂 Sweet Delights Bakery</h1>
-            <p>Custom Cakes & Artisan Pastries made with love. Have a custom design in mind? Send us your query below!</p>
-        </header>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="CureWell Hospitals home"><img src="assets/logo.png" alt="CureWell Hospitals" /></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="index.html#home">Home</a>
+      <a class="nav-link" href="index.html#about">About Us</a>
+      <a class="nav-link" href="appointment.html">Book An Appointment</a>
+    </nav>
+  </header>
 
-        <!-- Contact Form Card -->
-        <main class="form-card">
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="e.g. Sarah Jenkins">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="sarah@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="mobileno">Mobile Number *</label>
-                        <input type="tel" id="mobileno" name="mobileno" required placeholder="+1 (555) 123-4567">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="address">Delivery Address / Event Location</label>
-                    <input type="text" id="address" name="address" placeholder="123 Bakery Lane, Suite 4B">
-                </div>
-
-                <div class="form-group">
-                    <label for="query">Cake Query & Details *</label>
-                    <textarea id="query" name="query" rows="5" required placeholder="Describe your cake theme, flavor, number of guests, and event date..."></textarea>
-                </div>
-
-                <button type="submit" id="submitBtn" class="submit-btn">
-                    <span class="btn-text">Send Query</span>
-                    <span class="spinner" id="spinner"></span>
-                </button>
-            </form>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2026 Sweet Delights Bakery. Powered by AWS Serverless.</p>
-        </footer>
-    </div>
-
-    <!-- Success Modal Popup -->
-    <div id="successModal" class="modal">
-        <div class="modal-content">
-            <div class="success-icon">✨🎂✨</div>
-            <h2>Query Sent Successfully!</h2>
-            <p>Thank you for reaching out! Our team has received your request and will contact you shortly.</p>
-            <button id="closeModalBtn" class="modal-btn">Close</button>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <h1>Committed to Your Cure,<br class="desktop-break"> Dedicated to Your Wellbeing</h1>
+        <p>Our hospital brings experienced specialists, modern care and genuine<br class="desktop-break"> compassion together under one roof.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#services">Our Services</a>
+          <a class="btn btn-outline" href="appointment.html">Book An Appointment</a>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="about section-wrap" id="about">
+      <p class="eyebrow">About Us</p>
+      <div class="about-grid">
+        <div class="about-copy">
+          <h2>Welcome to CureWell<br class="desktop-break"> Multispeciality Hospital</h2>
+          <p class="intro">We combine experienced specialists, modern equipment and genuine compassion so every patient feels cared for.</p>
+          <div class="feature"><span class="feature-icon">♥</span><p>Complete health checkups at affordable prices, so that no disease is left unnoticed.</p></div>
+          <div class="feature"><span class="feature-icon">✚</span><p>In-house pharmacy and diagnostic centre for fast, convenient results under one roof.</p></div>
+        </div>
+        <div class="about-photo"><img src="assets/about.jpg" alt="A doctor warmly supporting two senior patients" /></div>
+      </div>
+      <div class="stats" aria-label="Hospital at a glance">
+        <div class="stat"><strong>25+</strong><span>Years of care</span></div>
+        <div class="stat"><strong>80+</strong><span>Specialists</span></div>
+        <div class="stat"><strong>50k</strong><span>Happy patients</span></div>
+        <div class="stat"><strong>24/7</strong><span>Emergency</span></div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-wrap">
+        <p class="eyebrow">What We Offer</p>
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-grid">
+          <article class="service-card"><span class="service-icon">♥</span><h3>Cardiology</h3><p>Advanced heart care and diagnostics.</p></article>
+          <article class="service-card"><span class="service-icon stethoscope">♧</span><h3>General Checkup</h3><p>Routine health screening for all ages.</p></article>
+          <article class="service-card"><span class="service-icon">💧</span><h3>Blood Bank</h3><p>Safe, tested blood available round the clock.</p></article>
+          <article class="service-card"><span class="service-icon">✚</span><h3>Emergency</h3><p>Rapid response team available 24/7.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid section-wrap">
+      <div class="footer-brand"><img src="assets/logo.png" alt="CureWell Hospitals" /><p>Committed to the best patient care at an affordable cost.</p></div>
+      <div><h3>Contact</h3><p>12 Health Avenue, Kolkata<br>+91 98765 43210<br><a href="mailto:care@curewell.example">care@curewell.example</a></p></div>
+      <div><h3>Hours</h3><p>Open 24/7 for emergencies</p></div>
+    </div>
+    <div class="copyright section-wrap">© <span id="year">2026</span> CureWell Hospital. All rights reserved.</div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

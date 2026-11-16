@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CureWell Hospitals — experienced specialists, modern care and genuine compassion." />
+  <title>Book an Appointment | CureWell Hospitals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Match the reference: move the complete copy inward and give the form less width. */
+    @media (min-width: 900px) {
+      .appointment-inner {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+        gap: 56px;
+      }
+      .appointment-copy {
+        max-width: 560px;
+        margin-left: 28px;
+      }
+      .appointment-form {
+        width: 90%;
+        justify-self: end;
+        padding: 34px 36px 32px;
+      }
+    }
+    @media (max-width: 899px) {
+      .appointment-copy { max-width: 620px; }
+      .appointment-form { width: 100%; }
+    }
+  </style>
+</head>
+<body class="appointment-page">
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="CureWell Hospitals home"><img src="assets/logo.png" alt="CureWell Hospitals" /></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link" href="index.html#home">Home</a>
+      <a class="nav-link" href="index.html#about">About Us</a>
+      <a class="nav-link active" href="appointment.html">Book An Appointment</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="appointment" id="appointment">
+      <div class="appointment-shade"></div>
+      <div class="appointment-inner section-wrap">
+        <div class="appointment-copy">
+          <h2>Make an<br>Appointment with<br>Your Doctor</h2>
+          <p>CureWell Hospital has all the characteristics of a world-class hospital, including a wide range of services and specialists, equipment and technology, ambience, and service quality.</p>
+        </div>
+        <form class="appointment-form" id="booking-form">
+          <h3>Make An Appointment</h3>
+          <label class="sr-only" for="full-name">Full Name</label>
+          <input id="full-name" name="name" type="text" placeholder="*Full Name" required />
+          <label class="sr-only" for="mobile">Mobile Number</label>
+          <input id="mobile" name="mobile" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="*Mobile Number (10 digits)" required />
+          <label class="sr-only" for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="Email Address" />
+          <div class="form-row">
+            <label class="sr-only" for="specialization">Specialization</label>
+            <select id="specialization" name="specialization" required><option value="" disabled selected>Specialization</option><option>Cardiology</option><option>Neurology</option><option>Orthopedics</option><option>Pediatrics</option><option>Dermatology</option><option>General Medicine</option></select>
+            <label class="sr-only" for="gender">Gender</label>
+            <select id="gender" name="gender"><option value="" disabled selected>Gender</option><option>Female</option><option>Male</option><option>Other</option><option>Prefer not to say</option></select>
+          </div>
+          <div class="form-row">
+            <label class="sr-only" for="date">Appointment date</label>
+            <input id="date" name="date" type="date" required />
+            <label class="sr-only" for="time">Appointment time</label>
+            <select id="time" name="time" required><option value="" disabled selected>Time</option><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option></select>
+          </div>
+          <button class="btn btn-primary submit-btn" type="submit">Book Appointment</button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid section-wrap">
+      <div class="footer-brand"><img src="assets/logo.png" alt="CureWell Hospitals" /><p>Committed to the best patient care at an affordable cost.</p></div>
+      <div><h3>Contact</h3><p>12 Health Avenue, Kolkata<br>+91 98765 43210<br><a href="mailto:care@curewell.example">care@curewell.example</a></p></div>
+      <div><h3>Hours</h3><p>Open 24/7 for emergencies</p></div>
+    </div>
+    <div class="copyright section-wrap">© <span id="year">2026</span> CureWell Hospital. All rights reserved.</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
